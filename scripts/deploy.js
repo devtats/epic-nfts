@@ -13,10 +13,13 @@ const main = async () => {
     // call function to Mint a NFT
     let txn = await nftContract.makeAnEpicNFT();
     await txn.wait();
+    console.log("Minted NFT #1");
 
     // call function to Mint a NFT
     txn = await nftContract.makeAnEpicNFT();
     await txn.wait();
+    console.log("Minted NFT #2");
+
   };
   // エラー処理を行っています。
   const runMain = async () => {
