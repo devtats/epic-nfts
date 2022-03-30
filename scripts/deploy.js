@@ -1,4 +1,4 @@
-// MyEpicNFT.sol のテストスクリプト
+// MyEpicNFT.sol のデプロイスクリプト
 
 const main = async () => {
     // コントラクトがコンパイルします
@@ -8,6 +8,7 @@ const main = async () => {
     const nftContract = await nftContractFactory.deploy();
     // コントラクトが Mint され、ローカルのブロックチェーンにデプロイされるまで待ちます。
     await nftContract.deployed();
+    console.log("deployed");
     console.log("Contract deployed to:", nftContract.address);
 
     // call function to Mint a NFT
